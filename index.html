@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCIA Smart Repair Service</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo"></div>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#estimate">Get Estimate</a></li>
+            <li><a href="#booking">Book Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Fast & Reliable Repair Services</h1>
+        <p>We fix phones, laptops, and home electronics at your doorstep.</p>
+        <div class="hero-buttons">
+            <a href="#estimate" class="btn primary">Get Free Estimate</a>
+            <a href="#booking" class="btn secondary">Book Services</a>
+        </div>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+        <div class="service-card">
+            <h3>Phone Repair</h3>
+            <p>Screen replacement, battery issues, charging problems...</p>
+        </div>
+        <div class="service-card">
+            <h3>Laptop Repair</h3>
+            <p>Hardware fixes, OS issues, performance upgrades...</p>
+        </div>
+        <div class="service-card">
+            <h3>Home Appliances</h3>
+            <p>Washing machines, microwaves, TVs, and more.</p>
+        </div>
+        <div class="service-card">
+            <h3>On-Site Diagnostics</h3>
+            <p>We visit your place and identify the problem quickly.</p>
+        </div>
+    </div>
+</section>
+
+<section class="estimate" id="estimate">
+    <h2>Get a Free Estimate</h2>
+    <div class="estimate-box">
+        <label>
+            Device Type
+            <select id="device">
+                <option value="">Select device</option>
+                <option value="phone">Phone</option>
+                <option value="laptop">Laptop</option>
+                <option value="appliance">Home Appliance</option>
+            </select>
+        </label>
+        <label>
+            Issue Type
+            <select id="issue">
+                <option value="">Select issue</option>
+            </select>
+        </label>
+        <div class="price">
+            Estimated Price: <span id="priceValue">--</span>
+            <p class="jks">Final price may vary after physical inspection.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ✅ Script moved here -->
+<script src="js/main.js"></script>
+</body>
+</html>

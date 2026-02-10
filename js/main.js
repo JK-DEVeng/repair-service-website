@@ -44,3 +44,8 @@ issue.addEventListener("change", () => {
   price.textContent = deviceIssues[issue.value] || "-";
 });
 })
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});

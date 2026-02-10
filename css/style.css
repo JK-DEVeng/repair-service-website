@@ -8,9 +8,10 @@ body{
 }
 .navbar{
     display:flex;
+
     justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
+    align-items:center;
+    padding: 20px 40px;
     background-color: #111;
 }
 .logo{
@@ -20,13 +21,18 @@ body{
 }
 .nav-links{
     list-style: none;
-    display: flex;
+    display:flex;
     gap: 24px;
+    
+
+}
+#menuToggle{
+    display: none;
 }
 .nav-links a {
     color: #ffffffd1;
     text-decoration:none;
-    font-size: 14px;
+    font-size: 15px;
 }
 .nav-links a:hover{
     text-decoration:none;
@@ -83,7 +89,6 @@ body{
 .service-grid{
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-gap: 24px;
 }
 .service-card{
     border: 1px solid #ddd;
@@ -112,6 +117,7 @@ gap: 24px;
 }
 .estimate-box{
     max-width: 420px;
+    
     background: #fff;
     padding: 24px;
     border-radius: 10px;
@@ -138,3 +144,47 @@ gap: 24px;
     text-decoration: underline ;
 
 }
+#menuToggle{
+
+    font-size: 26px;
+    background:none;
+    border: none;
+    color: white;
+    cursor:pointer;
+} 
+
+@media (max-width: 768px) {
+  .nav-links{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    flex-direction:column;
+    background:#111;
+    padding: 20px;
+    border-radius: 8px;
+   
+    padding: 20px;
+    border-radius: 8px;
+    /*text-align: right;*/
+  }
+  
+  #menuToggle{
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #f7f7f7;
+    cursor: pointer;
+  }
+  .nav-links.active{
+    display:flex;
+  }
+  
+}
+.nav-links li{
+    margin: 0 10px;
+}
+
+
+

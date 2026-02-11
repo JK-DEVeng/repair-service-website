@@ -185,6 +185,70 @@ grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 .nav-links li{
     margin: 0 10px;
 }
+.about{
+    padding: 80px 20px;
+   
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.about-container{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0px;
+    max-width: 1200px;
+    margin: auto;
+    
+}
 
+.about-text {
+    flex: 1;
+    padding: 40px;
+    border-radius: 12px;
+    background: linear-gradient(
+    150deg,
+    aquamarine 50%,
+    white 50%
+
+    );
+}
+
+
+.about-text h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.about-text p{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #030000;
+    margin-bottom: 15px;
+}
+.about-image{
+    flex: 1;
+    
+}
+.about-image img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        
+    }
+}
+html{
+    scroll-behavior: smooth;
+}
+.jkskl{
+    font-size: 30px !important;
+    border: 5px solid aquamarine;
+    border-radius: 20px;
+    
+
+}
 
 

@@ -187,7 +187,6 @@ grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 .about{
     padding: 80px 20px;
-   
     background-color: #f9f9f9;
     text-align: center;
 }
@@ -250,5 +249,210 @@ html{
     
 
 }
+.contact-section{
+    padding: 120px 0px;
+    background: #e6e9f0;
+}
+.contact-card{
+    max-width: 1100px;
+    width: 90%;
+    min-height: 600px;
+    
+    margin: 60px auto;
+    background: #f3f3f3;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    display: flex;
+    overflow: hidden;
+
+
+}
+.contact-info{
+    width: 40%;
+    background: linear-gradient(135deg, #5f2c82, #49a09d);
+    color: white;
+    padding: 40px;
+}
+.contact-info h2{
+    margin-bottom: 15px;
+}
+.info-item{
+    margin-bottom: 12px;
+    font-size: 16px;
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.info-item i{
+    color:rgb(132, 227, 132);
+    font-size: 18px;
+}
+.social-icons a{
+    display: inline-block;
+    /*margin-right: 10px;*/
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 200px;
+    margin-left: 20px;
+    padding-left: 10px;
+    
+
+}
+.facebook i{
+     text-decoration: none;
+    background: #e6f4ec;
+    color: #2d24d4;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30%;
+    transition: 0.3s;
+    margin-left: 10px;
+    
+}
+.twitter i{
+    text-decoration: none;
+    background: #060606;
+    color: #b9b9bf;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30%;
+    transition: 0.3s;
+    
+    
+}
+.twitter span{
+    margin-left: 14px;
+}
+.linkedin i{
+    text-decoration: none;
+    background: #0d65e9e9;
+    color: #b9b9bf;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30%;
+    transition: 0.3s;
+    margin-left: 6px;
+    
+}
+.social-icons i:hover{
+    background: #64d58a;
+    color: white;
+}
+.social-icons{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+.contact-form-container{
+    width: 60%;
+    padding: 40px;
+    background: white;
+}
+.contact-form-container h2{
+    margin-bottom: 20px;
+}
+form .row{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex: 1;
+}
+form input,
+form textarea{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    background: #f3f3f3;
+    outline: none;
+    box-shadow: 
+        inset 5px 10px #d1d1d1,
+        inset -5px -5px 10px #ffffff;
+}
+form textarea{
+    margin-bottom: 15px;
+    resize: none;
+}
+form button{
+    width: 100%;
+    padding: 15px;
+    color: white;
+    border: none;
+
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    transition: 0.03s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+form button:hover{
+    transform: translateY(-3px);
+}
+.contact-info p{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+@media (max-width: 768px){
+
+    .contact-section{
+        padding: 60px 15px;
+        background: #f4f6f9;
+        margin-top: 60px;
+    }
+
+    .contact-card{
+        flex-direction: column;
+        width: 90%;
+        border-radius: 20px;
+        overflow:visible;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+        background: white;
+        margin: 0 auto;
+    }
+    body{
+        overflow-x: hidden;
+    }
+
+    .contact-info{
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+        padding: 30px 20px;
+    }
+
+    .contact-form-container{
+        width: 100%;
+        border-radius: 0 0 20px 20px;
+        padding: 30px 20px;
+    }
+
+    .row{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    form input,
+    form textarea{
+        margin-bottom: 15px;
+    }
+
+    form button{
+        width: 100%;
+        padding: 16px;
+    }
+}
+
 
 

@@ -453,6 +453,56 @@ form button:hover{
         padding: 16px;
     }
 }
+.booking-section{
+    padding: 80px 0;
+}
+.booking-form{
+    max-width: 600px;
+    margin: 30px auto;
+}
+.form-group{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.form-group input,
+.form-group select{
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #3fd487;
+}
+.price-box{
+    background: #56ddaa;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.success-message{
+    margin-top: 20px;
+    color: green;
+    font-weight: 600;
+}
+.emergency-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.emergency-group input[type="checkbox"] {
+    all: revert;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    accent-color: #3fd487;
+    flex: 0 0 auto;
+}
+.container h2, p{
+    text-align: center;
+}
+
+
+
 
 
 

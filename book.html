@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Service</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="logo"></div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#estimate">Get Estimate</a></li>
+            <li><a href="book.html">Book Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About Us</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+    </nav>
+</header>
+
+<section class="booking-section">
+    <div class="container">
+        <h2>Book a Service</h2>
+        <p>Fill in the details below and our team will contact you shortly.</p>
+        <form id="bookingForm" class="booking-form">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label>Device Type</label>
+                <select name="device" id="deviceType" required>
+                    <option value="">Select Device</option>
+                    <option value="phone">Phone</option>
+                    <option value="laptop">Laptop</option>
+                    <option value="appliance">Home Appliance</option>
+                
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Issue</label>
+                <input type="text" name="issue" required>
+            </div>
+            <div class="form-group">
+                <label>Preferred Date</label>
+                <input type="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label>Preferred Time</label>
+                <input type="time" name="time" id="timeInput" required>
+            </div>
+            <div class="form-group emergency-group">
+                
+                 <input type="checkbox" id="emergencyCheck" name="emergency">
+                 <label for="emergencyCheck">Emergency Service (+ ₹500)</label>
+                
+                    
+                
+            </div>
+            <div class="price-box">
+                <p>Total Estimated Cost: <strong id="totalPrice">₹1000</strong></p>
+            </div>
+            <button type="submit" class="btn-primary">Submit Booking</button>
+        </form>
+        <div id="successMessage" class="success-message"></div>
+    </div>
+</section>
+<script src="js/booking.js"></script>
+</body>
+</html>

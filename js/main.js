@@ -49,3 +49,30 @@ const navLinks = document.getElementById("navLinks");
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
+const form = document.getElementById("contactForm");
+form.addEventListener("submit", async function (e) {
+  e.preventDefault(); 
+  const formData = new FormData(form);
+  const data = {
+    first_name: formData.get('first_name'),
+    last_name: formData.get("last_name"),
+    email: formData.get("email"),
+    phone: formData.get("phone"),
+    message: formData.get("message"),
+  };
+  try{
+    
+    const response = await fetch("http://127.0.0.1:5000/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    const result = await response.json();
+    alert(result.message);
+    form.reset();
+  } catch (error) {
+    alert("Something went wrong.");
+  }
+});

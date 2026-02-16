@@ -26,3 +26,45 @@ function calculateTotal() {
 emergencyCheck.addEventListener("change", calculateTotal);
 timeInput.addEventListener("change", calculateTotal);
 calculateTotal();
+
+const bookingForm = document.getElementById("bookingForm");
+const successMessage = document.getElementById("successMessage");
+
+bookingForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const bookingData = {
+        name: document.getElementById("name").value,
+        phone: document.getElementById("phone").value,
+        email: document.getElementById("email").value,
+        device: document.getElementById("deviceType").value,
+        issue: document.getElementById("issue").value,
+        date: document.getElementById("date").value,
+        time: document.getElementById("timeInput").value,
+        emergency: document.getElementById("emergencyCheck").checked,
+        total: totalPriceElement.textContent.replace("₹", "")
+    };
+
+    try {
+        const response = await fetch("http://localhost:5000/api/book-service", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(bookingData)
+        });
+        const result = await response.json();
+        if (result.success) {
+            successMessage.textContent = "Booking submitted successfully!";
+            successMessage.style.display = "block";
+            successMessage.style.textAlign = "center"
+            bookingForm.reset();
+            calculateTotal();
+        } else {
+            alert("Failed to submit booking.");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Server error. Please try again.");
+    }
+
+});
